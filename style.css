@@ -230,7 +230,9 @@ a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    align-itens: middle;
+    -webkit-box-align: middle;
+        -ms-flex-align: middle;
+            align-items: middle;
     height: var(--navbar);
   }
   .navbar-center li a {
