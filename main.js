@@ -4,7 +4,6 @@ $(document).ready(function () {
     var atual = '#home';
     $(atual+'-nav').addClass('active');
     $(atual+'-ball').addClass('active');
-    $("div").addClass('container-loader');
     
     const titulo = document.querySelector('.write');
     typeWriter(titulo);
@@ -22,14 +21,14 @@ $(document).ready(function () {
         if (id == "#") id = "#home";
         
         $('.full-size'+atual).addClass('achatado');
-        $("div").removeClass('container-loader');
+        $("div").removeClass('container-loader swing shadow');
         $(atual+'-nav').removeClass('active');
         $(atual+'-ball').removeClass('active');
 
         
         atual = id;
         $('.full-size'+atual).removeClass('achatado');
-        $("div").addClass('container-loader');
+        $("div").removeClass('container-loader swing shadow');
         $(atual+'-nav').addClass('active');
         $(atual+'-ball').addClass('active');
         
