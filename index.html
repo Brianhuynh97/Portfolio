@@ -104,51 +104,46 @@
             <div class="container content">
                 <div class="col-xs-10">
 
-                    <div class="section" data-anchor="skills">
-                        <div class="content">
-                          <h1 class="wow fadeInDown" data-wow-delay="0.2s">ABOUT ME</h1>
-                          <p class="wow fadeInDown" data-wow-delay="0.2s">As a Chemical Engineer transitions to tech, most of my tech-skills are self-taught! I'm a Sydney-based Front-end Developer focused on creating clean, responsive web designs!</p>
-                  
-                          <div class=" wow fadeInUp container-skillbar" data-wow-delay="0.2s">
-                            <div class="skillbar clearfix " data-percent="90%">
-                              <div class="skillbar-title" style="background: #DD1E2F;"><span>HTML5</span></div>
-                              <div class="skillbar-bar" style="background: #DD1E2F;"></div>
-                              <div class="skill-bar-percent">90%</div>
-                            </div> <!-- End Skill Bar -->
-                  
-                            <div class="skillbar clearfix " data-percent="80%">
-                              <div class="skillbar-title" style="background: #EBB035;"><span>CSS3</span></div>
-                              <div class="skillbar-bar" style="background: #EBB035;"></div>
-                              <div class="skill-bar-percent">80%</div>
-                            </div> <!-- End Skill Bar -->
-                  
-                            <div class="skillbar clearfix " data-percent="75%">
-                              <div class="skillbar-title" style="background: #218559;"><span>Javascript</span></div>
-                              <div class="skillbar-bar" style="background: #218559;"></div>
-                              <div class="skill-bar-percent">70%</div>
-                            </div> <!-- End Skill Bar -->
-                  
-                            <div class="skillbar clearfix " data-percent="45%">
-                              <div class="skillbar-title" style="background: #6840D4;"><span>Ruby on Rails</span></div>
-                              <div class="skillbar-bar" style="background: #6840D4;"></div>
-                              <div class="skill-bar-percent">70%</div>
-                            </div> <!-- End Skill Bar -->
-                  
-                            <div class="skillbar clearfix " data-percent="30%">
-                              <div class="skillbar-title" style="background: #06A2CB;"><span>C++</span></div>
-                              <div class="skillbar-bar" style="background: #06A2CB;"></div>
-                              <div class="skill-bar-percent">60%</div>
-                            </div> <!-- End Skill Bar -->
-                  
-                            <div class="skillbar clearfix " data-percent="20%">
-                              <div class="skillbar-title" style="background: #AB4DD2;"><span>Python</span></div>
-                              <div class="skillbar-bar" style="background: #AB4DD2;"></div>
-                              <div class="skill-bar-percent">70%</div>
-                            </div> <!-- End Skill Bar -->
+                        <div class="holder"><div class="bar " data-percent="95%"><span class="label">HTML</span></div>
+                            <div class="bar" data-percent="90%"><span class="label second">CSS</span></div>
+                            <div class="bar" data-percent="80%"><span class="label">JavaScript</span></div>
+                            <div class="bar" data-percent="85%"><span class="label second">jQuery</span></div>
+                            <div class="bar" data-percent="90%"><span class="label">Bootstrap</span></div>
+                            <div class="bar" data-percent="70%"><span class="label second">React</span></div>
+                            <div class="bar" data-percent="75%"><span class="label ">Python</span></div>
+                            <div class="bar" data-percent="60%"><span class="label second">C++</span></div>
+                            <div class="bar" data-percent="90%"><span class="label">SCSS</span></div>
+                            <div class="bar" data-percent="75%"><span class="label second">Node JS</span></div>
                         </div>
-                    </div>
+ 
+                        <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
                 </div>
             </div>
+
+            <script>
+            $(document).ready(function(){
+                $('.bar').each(function(i){  
+                    var $bar = $(this);
+                    $(this).append('<span class="count"></span>')
+                    setTimeout(function(){
+                    $bar.css('width', $bar.attr('data-percent'));      
+                    }, i*100);
+                });
+                
+                $('.count').each(function () {
+                    $(this).prop('Counter',0).animate({
+                        Counter: $(this).parent('.bar').attr('data-percent')
+                    }, {
+                        duration: 2000,
+                        easing: 'swing',
+                        step: function (now) {
+                            $(this).text(Math.ceil(now) +'%');
+                        }
+                    });
+                });
+                
+            }, 500)
+            </script>
         </section> 
         
         <section class="full-size achatado" id="work">
