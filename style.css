@@ -850,37 +850,43 @@ h1 {
   opacity: 0;
 }
 
+.holder {
+  width: 100%;
+  padding-top: 30px;
+  padding-right: 2%;
+  padding-left: 2%;
+  height: auto;
+  overflow: none;
+}
+
 .bar {
-  vertical-align: baseline;
-  -webkit-font-smoothing: antialiased;
-  background: #6e504f;
-  width: 0;
-  margin: .25em 0;
-  color: #fff;
   position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #efefef;
+  height: 30px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  transition-property: width, background-color;
   -webkit-transition: width 5s, background .5s;
   transition: width 5s, background .5s;
   -webkit-transform: translate3d(0, 0, 0);
   clear: both;
 }
 
-.bar:nth-of-type(odd) {
-  background: #6e504f;
-}
-
 .bar .label {
   font-size: .75em;
   padding: 1em;
-  background: #212121;
   width: 7em;
   display: inline-block;
   position: relative;
   z-index: 2;
   font-weight: bold;
-}
-
-.bar .label.second {
-  background: #333;
 }
 
 .count {
