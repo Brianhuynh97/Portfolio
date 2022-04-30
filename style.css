@@ -15,7 +15,7 @@
   --bgbody: #262630;
   --bgblack: #000001;
   --bgellipse: #111115;
-  --gray: #646465;
+  --gray: #ccccf3;
   --clear: #FEFEFF;
   --navbar: 60px;
   --navball: 8px;
@@ -33,11 +33,11 @@ html {
 }
 
 body {
-  background-color: #232526;
+  background-color: #1d4350;
   /* fallback for old browsers */
   /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#232526), to(#414345));
-  background: linear-gradient(to right, #232526, #414345);
+  background: -webkit-gradient(linear, left top, right top, from(#1d4350), to(#a43931));
+  background: linear-gradient(to right, #1d4350, #a43931);
   font-family: var(--pattern);
   overflow-x: hidden;
   -webkit-transition: all 2s;
