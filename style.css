@@ -27,7 +27,7 @@
 --------------------------------------------------- */
 html {
   background-color: #1e222f;
-  background-image: url("https://raw.githubusercontent.com/jimmyfilips/jimmyfilips.github.io/master/img/bg.jpg");
+  background-image: url("https://unsplash.com/photos/f2DL8oI-7N8");
   background-size: cover;
   background-position: top center;
   /* https://unsplash.com/photos/f2DL8oI-7N8 */
@@ -529,7 +529,7 @@ h1 {
 
 .logo-home .f::before {
   color: var(--inverse);
-  content: "F";
+  content: "B";
   margin-left: .5rem;
   margin-right: -2.56rem;
 }
