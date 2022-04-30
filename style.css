@@ -913,99 +913,106 @@ h1 {
   font-weight: bold;
 }
 
-.experience {
-  background-color: #1d4350;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#1d4350), to(#a43931));
-  background: linear-gradient(to right, #1d4350, #a43931);
+.experience h1 {
+  text-align: center;
+  font-weight: 300;
+  color: #fffefe;
+}
+
+.experience h1 span {
+  font-weight: 600;
+}
+
+.experience .container {
+  width: 80%;
   padding: 50px 0;
-  overflow-x: hidden;
-}
-
-.experience .content {
-  text-align: center;
-}
-
-.experience .content h1 {
-  font-size: 2em;
-  color: #fff;
-}
-
-.experience .content ul {
-  padding: 10px 0;
-  list-style-type: none;
-}
-
-.experience .content ul li {
-  background: #f5f5f5;
+  margin: 50px auto;
   position: relative;
-  margin-left: 20px;
-  width: 5px;
-  padding-bottom: 5px;
+  overflow: hidden;
 }
 
-.experience .content ul li:last-child {
-  padding-bottom: 7px;
-}
-
-.experience .content ul li:before {
+.experience .container:before {
   content: '';
-  background-color: #1d4350;
-  /* fallback for old browsers */
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: -webkit-gradient(linear, left top, right top, from(#1d4350), to(#a43931));
-  background: linear-gradient(to right, #1d4350, #a43931);
   position: absolute;
+  top: 10%;
   left: 50%;
-  top: 30%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  width: 20px;
-  height: 20px;
-  border: 4px solid #f5f5f5;
+  margin-left: -1px;
+  width: 2px;
+  height: 100%;
+  background: #CCD1D9;
+  z-index: 1;
 }
 
-.experience .content ul li .workexp {
-  opacity: 0;
-  margin-left: 10vw;
+.timeline-block {
+  width: calc(50% + 8px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  clear: both;
 }
 
-.experience .content ul li .experience-content {
-  background: #f5f5f5;
-  position: relative;
-  top: 7px;
-  left: 48px;
-  width: calc(100vw - 100px);
-  padding: 20px;
-  text-align: center;
-  border-radius: 0 5px 5px;
+.timeline-block-right {
+  float: right;
 }
 
-.experience .content ul li .experience-content h2 {
-  font-size: 1.5em;
-  color: black;
-  padding-bottom: 10px;
+.timeline-block-left {
+  float: left;
+  direction: rtl;
 }
 
-.experience .content ul li .experience-content .experience-time {
-  color: #777;
-  font-size: 1.1em;
-  padding-bottom: 10px;
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #F5F7FA;
+  background: #4FC1E9;
+  margin-top: 10px;
+  z-index: 9999;
 }
 
-.experience .content ul li .experience-content p {
-  color: #1a1a1a;
-  font-size: .95em;
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+  color: #fffefe;
 }
 
-.experience .content ul li .experience-content:before {
-  content: '';
-  background: #f5f5f5;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 35px;
-  height: 5px;
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.timeline-content span {
+  font-size: 15px;
+  color: #fffefe;
+}
+
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  color: #fffefe;
+}
+
+@media screen and (max-width: 768px) {
+  .container:before {
+    left: 8px;
+    width: 2px;
+  }
+  .timeline-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .timeline-block-right {
+    float: none;
+  }
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
+  }
 }
 /*# sourceMappingURL=style.css.map */

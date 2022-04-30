@@ -908,101 +908,116 @@ h1 {
   font-weight: bold;
 }
 
-
+// Experience Section
 .experience {
-  background-color: #1d4350;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #1d4350, #a43931);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #1d4350, #a43931);
-  padding: 50px 0;
-  overflow-x: hidden;
-
-  .content {
+  h1 {
     text-align: center;
+    font-weight: 300;
+    color: rgb(255, 254, 254);
+  }
 
-    h1 {
-      font-size: 2em;
-      color: #fff;
-    }
+  h1 span {
+    font-weight: 600;
+  }
 
-    ul {
-      padding: 10px 0;
-      list-style-type: none;
+  .container {
+    width: 80%;
+    padding: 50px 0;
+    margin: 50px auto;
+    position: relative;
+    overflow: hidden;
+  }
 
-      li {
-        background: #f5f5f5;
-        position: relative;
-        margin-left: 20px;
-        width: 5px;
-        padding-bottom: 5px;
+  .container:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -1px;
+    width: 2px;
+    height: 100%;
+    background: #CCD1D9;
+    z-index: 1
+  }
+}
 
-        &:last-child {
-          padding-bottom: 7px;
-        }
+.timeline-block {
+  width: -webkit-calc(50% + 8px);
+  width: -moz-calc(50% + 8px);
+  width: calc(50% + 8px);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack: justify;
+  justify-content: space-between;
+  clear: both;
+}
 
-        &:before {
-          content: '';
-          background-color: #1d4350;
-          /* fallback for old browsers */
-          background: -webkit-linear-gradient(to right, #1d4350, #a43931);
-          /* Chrome 10-25, Safari 5.1-6 */
-          background: linear-gradient(to right, #1d4350, #a43931);
-          position: absolute;
-          left: 50%;
-          top: 30%;
-          -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-          width: 20px;
-          height: 20px;
-          border: 4px solid #f5f5f5;
-        }
+.timeline-block-right {
+  float: right;
+}
 
-        .workexp {
-          opacity: 0;
-          margin-left: 10vw;
-        }
+.timeline-block-left {
+  float: left;
+  direction: rtl
+}
 
-        .experience-content {
-          background: #f5f5f5;
-          position: relative;
-          top: 7px;
-          left: 48px;
-          width: calc(100vw - 100px);
-          padding: 20px;
-          text-align: center;
-          -webkit-border-radius: 0 5px 5px;
-          -moz-border-radius: 0 5px 5px;
-          border-radius: 0 5px 5px;
+.marker {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #F5F7FA;
+  background: #4FC1E9;
+  margin-top: 10px;
+  z-index: 9999
+}
 
-          h2 {
-            font-size: 1.5em;
-            color: rgb(0, 0, 0);
-            padding-bottom: 10px;
-          }
+.timeline-content {
+  width: 95%;
+  padding: 0 15px;
+  color: rgb(255, 254, 254)
+}
 
-          .experience-time {
-            color: #777;
-            font-size: 1.1em;
-            padding-bottom: 10px;
-          }
+.timeline-content h3 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 25px;
+  font-weight: 500
+}
 
-          p {
-            color: #1a1a1a;
-            font-size: .95em;
-          }
+.timeline-content span {
+  font-size: 15px;
+  color: rgb(255, 254, 254);
+}
 
-          &:before {
-            content: '';
-            background: #f5f5f5;
-            position: absolute;
-            top: 0;
-            left: 50%;
-            width: 35px;
-            height: 5px;
-          }
-        }
-      }
-    }
+.timeline-content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  word-spacing: 1px;
+  color: rgb(255, 254, 254);
+}
+
+
+@media screen and (max-width: 768px) {
+  .container:before {
+    left: 8px;
+    width: 2px;
+  }
+
+  .timeline-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .timeline-block-right {
+    float: none;
+  }
+
+  .timeline-block-left {
+    float: none;
+    direction: ltr;
   }
 }
