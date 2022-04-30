@@ -541,7 +541,7 @@ body {
   content: 'work';
 }
 
-.navbar-center a#contato-nav:after {
+.navbar-center a#contact-nav:after {
   content: 'contact';
 }
 

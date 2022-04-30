@@ -11,7 +11,7 @@
     <!-- Bootstrap 4.0.0 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -57,7 +57,7 @@
     <div class="page-loaded">
             
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <span class="logo-l">&lt;</span> <span class="logo">B</span> <span class="logo-g">&gt;</span>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,7 +68,7 @@
                 <li><a href="#home" id="home-nav"><i class="fas fa-home"></i></a></li>
                 <li><a href="#skill" id="skill-nav"><i class="fas fa-cogs"></i></a></li>
                 <li><a href="#work" id="work-nav"><i class="far fa-eye"></i></a></li>
-                <li><a href="#contato" id="contato-nav"><i class="far fa-envelope"></i></a></li>
+                <li><a href="#contact" id="contact-nav"><i class="far fa-envelope"></i></a></li>
             </ul>
             </div>
             <div class="navbar-footer">
@@ -96,14 +96,14 @@
                 <h1 class="logo-home"><span class="f">B</span>rian Huynh</h1>
                 <p class="extra write">Software Developer | Front End Developer</p>
                 <p class="extra write">I'm a Frontend Software Developer with a strong passion for building responsive and performant web applications with great user experiences that positively impact the world.</p>
-                <a class="sp-btn" href="#contato">Contact Me</a>
+                <a class="sp-btn" href="contact.html">Contact Me</a>
             </div>
         </article>
         
         <section class="full-size achatado" id="skill">
             <div class="container content">
                 <div class="col-xs-10">
-
+                    
                 </div>
             </div>
         </section> 
@@ -115,10 +115,10 @@
             </div>
         </section>
         
-        <section class="full-size achatado" id="contato">
+        <section class="full-size achatado" id="contact">
             <div id="particles-js"></div>
             <div class="container content">
-
+                <a href="contact.html"></a>
             </div>
         </section>
         
@@ -127,7 +127,7 @@
                 <li><a href="#home" id="home-ball"></a></li>
                 <li><a href="#skill" id="skill-ball"></a></li>
                 <li><a href="#work" id="work-ball"></a></li>
-                <li><a href="#contato" id="contato-ball"></a></li>
+                <li><a href="contact.html" id="contact-ball"></a></li>
             </ul>
             <div aria-hidden="true" class="ball-desc">It's a one page! :)</div>
         </nav>
@@ -153,18 +153,47 @@
         }
     </script>
 
-
-<!-- skills page -->
-
-
-<!-- work experience page -->
-
-
-
-<!-- contact page -->
-
-
-
 </body>
 
+<script>
+$(document).ready(function () {
+    $('.page-load').addClass('effect');
+    $('.page-loaded').removeClass('effect');
+    var atual = '#home';
+    $(atual+'-nav').addClass('active');
+    $(atual+'-ball').addClass('active');
+    
+    const titulo = document.querySelector('.write');
+    typeWriter(titulo);
+    
+    $('.navbar-collapse a[href^="#"]').on('click', function (e) {
+        setTimeout(function () {
+            if ($('.navbar-toggle').css('display') != 'none') $('.navbar-toggle').trigger("click");
+        }, 1000);
+    });
+    
+    $('a[href^="#"]').on('click', function (e) {
+        e.preventDefault();
+        
+        var id = $(this).attr('href');
+        if (id == "#") id = "#home";
+        
+        $('.full-size'+atual).addClass('achatado');
+        $("div").removeClass('container-loader swing shadow');
+        $(atual+'-nav').removeClass('active');
+        $(atual+'-ball').removeClass('active');
+
+        
+        atual = id;
+        $('.full-size'+atual).removeClass('achatado');
+        $("div").removeClass('container-loader swing shadow');
+        $(atual+'-nav').addClass('active');
+        $(atual+'-ball').addClass('active');
+        
+        $('html, body').scrollTop(0);
+    });
+});
+
+
+</script>
 </html>
