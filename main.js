@@ -4,11 +4,13 @@ $(document).ready(function () {
     var atual = '#home';
     $(atual+'-nav').addClass('active');
     $(atual+'-ball').addClass('active');
+    $('.container-loader').addClass('active');
     
     const titulo = document.querySelector('.write');
     typeWriter(titulo);
     
     $('.navbar-collapse a[href^="#"]').on('click', function (e) {
+        $('.container-loader').removeClass('active');
         setTimeout(function () {
             if ($('.navbar-toggle').css('display') != 'none') $('.navbar-toggle').trigger("click");
         }, 1000);
@@ -23,6 +25,7 @@ $(document).ready(function () {
         $('.full-size'+atual).addClass('achatado');
         $(atual+'-nav').removeClass('active');
         $(atual+'-ball').removeClass('active');
+
         
         atual = id;
         $('.full-size'+atual).removeClass('achatado');
