@@ -1,27 +1,27 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2|La+Belle+Aurore|Open+Sans|Overpass+Mono');
 
 :root {
---font-pattern: 'open sans', 'segoe ui', sans-serif; /* geral */
---font-monospace: 'Overpass Mono', monospace; /* menus */
---font-cursive: 'La Belle Aurore', cursive; /* tags */
---font-emphasys: 'Exo 2', sans-serif; /* logo */
+  --font-pattern: 'open sans', 'segoe ui', sans-serif; /* geral */
+  --font-monospace: 'Overpass Mono', monospace; /* menus */
+  --font-cursive: 'La Belle Aurore', cursive; /* tags */
+  --font-emphasys: 'Exo 2', sans-serif; /* logo */
 
---featured: #08FBE8;
---inverse: #FB0853;
---chocolate: #D2691E;
+  --featured: #08FBE8;
+  --inverse: #FB0853;
+  --chocolate: #D2691E;
 
---bgcolor: #19191D;
---bgbody: #262630;
---bgblack: #000001;
---bgellipse: #111115;
+  --bgcolor: #19191D;
+  --bgbody: #262630;
+  --bgblack: #000001;
+  --bgellipse: #111115;
 
---gray: #646465;
---clear: #FEFEFF;
-    
---navbar: 60px;
---navball: 8px;
---animation: .4s;
---pagein: 2s;
+  --gray: #646465;
+  --clear: #FEFEFF;
+
+  --navbar: 60px;
+  --navball: 8px;
+  --animation: .4s;
+  --pagein: 2s;
 }
 
 /* All
@@ -40,14 +40,11 @@ body {
   overflow-x: hidden;
   transition: all 2s;
 }
-a {
+.theme {
   color: var(--featured);
 }
-.theme {
-	color: var(--featured);
-}
 .theme-inverse {
-	color: var(--inverse);
+  color: var(--inverse);
 }
 .page-load {
   display:block;
@@ -61,44 +58,44 @@ a {
 /* Loading
 --------------------------------------------------- */
 .loading span {
-	display: inline-block;
-	width: 7px;
-	height: 7px;
-	border-radius: 50%;
-	background: var(--clear);
-	margin: 3px;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--clear);
+  margin: 3px;
 }
 .loading {
-	margin: 40px auto;
-	text-align: center;
+  margin: 40px auto;
+  text-align: center;
 }
 
 /* Loading anim
 ------------------------ */
 .loading span {
-	animation: dots .6s cubic-bezier(0.6,0.1,1,0.4);
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
+  animation: dots .6s cubic-bezier(0.6,0.1,1,0.4);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 .loading span:nth-child(0) {
-	animation-delay: .1s;
+  animation-delay: .1s;
 }
 .loading span:nth-child(2) {
-	animation-delay: .2s;
+  animation-delay: .2s;
 }
 .loading span:nth-child(3) {
-	animation-delay: .3s;
+  animation-delay: .3s;
 }
 .loading span:nth-child(4) {
-	animation-delay: .4s;
+  animation-delay: .4s;
 }
 @keyframes dots {
-	from {
-		transform: translate3D(0,0,0);
-	}
-	to {
-		transform: translate3D(0,30px,0);
-	}
+  from {
+    transform: translate3D(0,0,0);
+  }
+  to {
+    transform: translate3D(0,30px,0);
+  }
 }
 
 /* Navbar
@@ -223,8 +220,8 @@ a {
   }
 }
 @media only screen and (max-height : 420px) and (min-width : 992px) {
-  .navbar-center {
-    top: var(--navbar);
+.navbar-center {
+  top: var(--navbar);
     margin-top: 0;
   }
 }
@@ -234,45 +231,45 @@ a {
 .navbar-brand .logo,
 .navbar-brand .logo-l,
 .navbar-brand .logo-g {
-    margin-right: .1rem;
+  margin-right: .1rem;
 }
 .navbar-brand .logo::before,
 .navbar-brand .logo-l::before,
 .navbar-brand .logo-g::before {
-    color: var(--inverse);
-    margin-left: .2rem;
-    margin-right: -.8rem;
+  color: var(--inverse);
+  margin-left: .2rem;
+  margin-right: -.8rem;
 }
 .navbar-brand .logo::before {
-    content: "F";
+  content: "B";
 }
 .navbar-brand .logo-l::before {
-    content: "<";
+  content: "<";
 }
 .navbar-brand .logo-g::before {
-    content: ">";
+  content: ">";
 }
 
 /* Navbar Hover effect
 ------------------------ */
 .navbar-right a {
-    transition: all var(--animation);
+  transition: all var(--animation);
 }
 .navbar-center a svg {
-    -webkit-transition: all var(--animation) ease-out;
-    transition: all var(--animation) ease-out;
+  -webkit-transition: all var(--animation) ease-out;
+  transition: all var(--animation) ease-out;
 }
 .navbar-center a#home-nav:after {
-    content: 'home';
+  content: 'home';
 }
 .navbar-center a#skill-nav:after {
-    content: 'skill';
+  content: 'skill';
 }
 .navbar-center a#work-nav:after {
-    content: 'work';
+  content: 'work';
 }
 .navbar-center a#contato-nav:after {
-    content: 'contact';
+  content: 'contact';
 }
 .navbar-center a {
   position:relative;
@@ -346,8 +343,8 @@ a {
     display: inline-block;
     height: var(--navball);
     margin: 
-      calc(calc(var(--navbar) / 4) - calc(var(--navball) / 4)) 
-      calc(calc(var(--navbar) / 2) - calc(var(--navball) / 2));
+    calc(calc(var(--navbar) / 4) - calc(var(--navball) / 4)) 
+    calc(calc(var(--navbar) / 2) - calc(var(--navball) / 2));
     transition: all var(--animation);
     width: var(--navball);
   }
@@ -403,7 +400,7 @@ a {
   /* background by SVGBackgrounds.com */
 }
 .content {
-    color: var(--clear);
+  color: var(--clear);
 }
 
 /* Home
@@ -449,7 +446,7 @@ h1 {
   opacity: .8;
 }
 .tags p {
-  margin-bottom: .6em !important;
+margin-bottom: .6em !important;
 }
 .tags.superior {
   left: 70px;
@@ -506,32 +503,32 @@ h1 {
   padding: .65rem 1.5rem;
 }
 .sp-btn:enabled {
-	color: var(--featured);
+  color: var(--featured);
   text-decoration: none;
 }
 .sp-btn:hover, .sp-btn:active {
-	background-color: var(--chocolate);
-	color: var(--bgbody);
+  background-color: var(--chocolate);
+  color: var(--bgbody);
   text-decoration: none;
 } 
 
 /* Animation transition
 --------------------------------------------------- */
 .achatado {
-    height: 0 !important;
-    min-height: 0 !important;
-    opacity: 0 !important;
-    overflow-y: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  opacity: 0 !important;
+  overflow-y: hidden !important;
 }
 .page-load {
-    transition: all var(--pagein);
+  transition: all var(--pagein);
 }
 .page-load effect {
-    height: 0;
+  height: 0;
 }
 .page-loaded {
-    transition: all var(--pagein);
+  transition: all var(--pagein);
 }
 .effect {
-    opacity: 0; 
+  opacity: 0; 
 }

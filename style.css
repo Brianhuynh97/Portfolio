@@ -41,10 +41,6 @@ body {
   transition: all 2s;
 }
 
-a {
-  color: var(--featured);
-}
-
 .theme {
   color: var(--featured);
 }
@@ -316,7 +312,7 @@ a {
 }
 
 .navbar-brand .logo::before {
-  content: "F";
+  content: "B";
 }
 
 .navbar-brand .logo-l::before {
