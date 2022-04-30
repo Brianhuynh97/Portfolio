@@ -4,6 +4,7 @@ $(document).ready(function () {
     var atual = '#home';
     $(atual+'-nav').addClass('active');
     $(atual+'-ball').addClass('active');
+    $("div").addClass('container-loader');
     
     const titulo = document.querySelector('.write');
     typeWriter(titulo);
@@ -28,7 +29,7 @@ $(document).ready(function () {
         
         atual = id;
         $('.full-size'+atual).removeClass('achatado');
-        $("div").removeClass('container-loader');
+        $("div").addClass('container-loader');
         $(atual+'-nav').addClass('active');
         $(atual+'-ball').addClass('active');
         
