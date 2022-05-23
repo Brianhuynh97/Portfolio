@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Exo+2|La+Belle+Aurore|Open+Sans|Overpass+Mono');
+@import url('http://fonts.cdnfonts.com/css/air-balloon');
 
 :root {
   --font-pattern: 'open sans', 'segoe ui', sans-serif;
@@ -848,6 +849,19 @@ h1 {
 }
 
 // Skill bar
+.softskill {
+  h2 {
+    font-family: 'Air Balloon', sans-serif;
+  }
+
+  li {
+    font-size: 20px;
+    background: -webkit-linear-gradient(#c9ffbf,
+        #ffafbd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
 
 .holder {
   width: 100%;
