@@ -32,6 +32,7 @@
 --------------------------------------------------- */
 
 html {
+  // background: url("images/background.jpg");
   background-color: rgb(30, 34, 47);
   background-size: cover;
   background-position: top center;
@@ -39,6 +40,7 @@ html {
 }
 
 body {
+  // background: url("images/background.jpg");
   background-color: #7E7474;
   /* fallback for old browsers */
   // background: -webkit-linear-gradient(to right, #1d4350, #a43931);
@@ -324,6 +326,10 @@ body {
   animation: shadow-r-n .425s ease-in-out infinite alternate;
 }
 
+.background {
+  max-width: 5%;
+  max-height: 5%;
+}
 
 /* Navbar
 --------------------------------------------------- */

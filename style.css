@@ -322,6 +322,11 @@ body {
   animation: shadow-r-n .425s ease-in-out infinite alternate;
 }
 
+.background {
+  max-width: 5%;
+  max-height: 5%;
+}
+
 /* Navbar
 --------------------------------------------------- */
 .navbar-dark {
