@@ -39,11 +39,11 @@ html {
 }
 
 body {
-  background-color: #1d4350;
+  background-color: #7E7474;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #1d4350, #a43931);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #1d4350, #a43931);
+  // background: -webkit-linear-gradient(to right, #1d4350, #a43931);
+  // /* Chrome 10-25, Safari 5.1-6 */
+  // background: linear-gradient(to right, #1d4350, #a43931);
   font-family: var(--pattern);
   overflow-x: hidden;
   transition: all 2s;
@@ -120,7 +120,7 @@ body {
 .container-loader {
   left: 35%;
   position: absolute;
-  top: 25%;
+  top: 33%;
 }
 
 .swing div {
