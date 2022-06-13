@@ -1620,4 +1620,52 @@ h1 {
     transform: rotateX(360deg) rotateZ(360deg);
   }
 }
+
+input[type="reset"] {
+  border: 1px solid var(--featured);
+  border-radius: 5px;
+  color: var(--featured);
+  display: inline-block;
+  font-family: var(--monospace);
+  line-height: normal;
+  padding: .65rem 1.5rem;
+  margin-left: 3rem;
+}
+
+input[type="reset"]:enabled {
+  color: var(--featured);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+input[type="reset"]:hover,
+input[type="reset"]:active {
+  background-color: var(--chocolate);
+  color: var(--bgbody);
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  border: 1px solid var(--featured);
+  border-radius: 5px;
+  color: var(--featured);
+  display: inline-block;
+  font-family: var(--monospace);
+  line-height: normal;
+  padding: .65rem 1.5rem;
+  margin-left: 3rem;
+}
+
+input[type="submit"]:enabled {
+  color: var(--featured);
+  text-decoration: none;
+  background-color: transparent;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:active {
+  background-color: var(--chocolate);
+  color: var(--bgbody);
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
